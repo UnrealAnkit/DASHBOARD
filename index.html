@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="sidebar">
+        <h2> Dashboard</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="learners.html">Learners</a></li>
+          <!-- Updated link -->
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+        <div class="quick-links">
+          <button id="addCourseButton">Add Courses</button>
+        </div>
+      </div>
+      <div class="main-content">
+        <div id="home" class="tab-content active">
+          <h3>Dashboard Overview</h3>
+          <div class="overview">
+            <div class="overview-item">
+              <h3>Courses Enrolled</h3>
+              <p id="coursesEnrolled">4</p>
+            </div>
+            <div class="overview-item">
+              <h3>Total Time Spent</h3>
+              <p id="totalTimeSpent">100h</p>
+            </div>
+            <div class="overview-item">
+              <h3>Skills Completed</h3>
+              <p id="skillsCompleted">0</p>
+            </div>
+            <div class="overview-item">
+              <h3>Certificates Earned</h3>
+              <p id="certificatesEarned">0</p>
+            </div>
+          </div>
+          <div class="charts">
+            <div class="chart-container">
+              <canvas id="courseProgressChart"></canvas>
+            </div>
+            <div class="chart-container small-chart">
+              <canvas id="timeSpentChart"></canvas>
+            </div>
+          </div>
+          <div class="course-list" id="courseList">
+            <!-- Course details will be dynamically populated here -->
+          </div>
+        </div>
+
+        <div id="settings" class="tab-content">
+          <h3>Settings</h3>
+          <p>Settings content goes here</p>
+        </div>
+
+        <div id="profile" class="tab-content">
+          <h3>Profile</h3>
+          <p>Profile content goes here</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
